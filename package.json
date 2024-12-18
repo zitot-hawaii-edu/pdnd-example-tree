@@ -1,0 +1,48 @@
+{
+  "name": "pdnd-example-tree",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@atlaskit/app-provider": "^1.4.3",
+    "@atlaskit/button": "^20.3.7",
+    "@atlaskit/css-reset": "^6.11.2",
+    "@atlaskit/dropdown-menu": "^12.23.2",
+    "@atlaskit/ds-lib": "^3.3.0",
+    "@atlaskit/focus-ring": "^2.0.0",
+    "@atlaskit/form": "^10.6.3",
+    "@atlaskit/icon": "^23.1.1",
+    "@atlaskit/modal-dialog": "^12.18.5",
+    "@atlaskit/pragmatic-drag-and-drop": "^1.4.0",
+    "@atlaskit/pragmatic-drag-and-drop-flourish": "^1.1.2",
+    "@atlaskit/pragmatic-drag-and-drop-hitbox": "^1.0.3",
+    "@atlaskit/pragmatic-drag-and-drop-live-region": "^1.2.0",
+    "@atlaskit/pragmatic-drag-and-drop-react-drop-indicator": "^1.1.3",
+    "@atlaskit/select": "^18.9.0",
+    "@atlaskit/tokens": "^2.5.0",
+    "@emotion/react": "^11.14.0",
+    "memoize-one": "^6.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "tiny-invariant": "^1.3.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.15.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.15.0",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "eslint-plugin-react-refresh": "^0.4.14",
+    "globals": "^15.12.0",
+    "typescript": "~5.6.2",
+    "typescript-eslint": "^8.15.0",
+    "vite": "^6.0.1"
+  }
+}
