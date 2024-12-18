@@ -1,3 +1,58 @@
+steps to reproduce without downloading this git repository.
+
+Create a new project using yarn and vite
+
+```yarn create vite```
+
+Give the project a name. 
+
+Pick React and Typescript for the project lang
+
+```cd <project-name>```
+
+Add dependencies using Yarn add
+
+```
+yarn add react react-dom @emotion/react tiny-invariant memoize-one;
+yarn add @atlaskit/pragmatic-drag-and-drop \
+  @atlaskit/pragmatic-drag-and-drop-flourish \
+  @atlaskit/pragmatic-drag-and-drop-hitbox \
+  @atlaskit/pragmatic-drag-and-drop-live-region \
+  @atlaskit/pragmatic-drag-and-drop-react-drop-indicator;
+yarn add @atlaskit/tokens @atlaskit/css-reset @atlaskit/ds-lib @emotion/react;
+yarn add @atlaskit/button \
+  @atlaskit/dropdown-menu \
+  @atlaskit/icon \
+  @atlaskit/modal-dialog \
+  @atlaskit/form \
+  @atlaskit/select \
+  @atlaskit/focus-ring \
+  @atlaskit/app-provider;
+
+```
+
+Change directory and create folders. Use -p to do it all at once
+
+```
+mkdir -p src/pragmatic-drag-and-drop/documentation/examples/data
+mkdir -p src/pragmatic-drag-and-drop/documentation/examples/pieces/tree
+```
+
+Go to [Tree @codesandbox](https://codesandbox.io/p/sandbox/tree-forked-2ntmyh) and copy the files to the appropriate folders. 
+
+Edit main.tsx to load css-reset instead of ./index.css and Example from ./example.tsx instead of the default App.tsx
+
+In tree-item.tsx, remove the old React16 style render logic inside onGenerateDragPreview. Replace it with React 18 style rendering. Don't forget to change the include file at the top to point to react-dom
+```
+    render: ({ container }) => {
+      const root = createRoot(container);
+      root.render(<Preview item={item} />);
+
+      // Cleanup on unmount
+      return () => root.unmount();
+    },
+```
+### End main Content
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
