@@ -43,6 +43,20 @@ Go to [Tree @codesandbox](https://codesandbox.io/p/sandbox/tree-forked-2ntmyh) a
 Edit main.tsx to load css-reset instead of ./index.css and Example from ./example.tsx instead of the default App.tsx
 
 In tree-item.tsx, remove the old React16 style render logic inside onGenerateDragPreview. Replace it with React 18 style rendering. Don't forget to change the include file at the top to point to react-dom
+
+Change
+```import ReactDOM from 'react-dom';``` to ```import { createRoot } from 'react-dom/client';```
+
+And
+```
+						render: ({ container }) => {
+							ReactDOM.render(<Preview item={item} />, container);
+							return () => ReactDOM.unmountComponentAtNode(container);
+						},
+```
+
+to
+
 ```
     render: ({ container }) => {
       const root = createRoot(container);
